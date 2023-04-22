@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ptkGlXNCw+2DL5E/1NocoOdkXcYHjgNkuxcQr6Qx48T6Qj3ojceOi1YU+cpx05wPpX03dz32TYN00rCInZd89g==",
+  "dgSpecHash": "iBYEInXc3q7s0PLfyjGW5n8KRhqITMAnne6ppAzehjxMfnaMwqx6eGM0lEOi6KXujRegUFt2HaNe84soZZLmgw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ACER\\Documents\\APIMeli\\ApiMEli\\ApiMEli\\ApiMeli.csproj",
+  "projectFilePath": "C:\\Users\\ACER\\Documents\\Programacion\\APIMeLi\\ApiMEli\\ApiMeli.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ACER\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\ACER\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

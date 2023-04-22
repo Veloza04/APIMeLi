@@ -1,36 +1,50 @@
 using System;
 using System.Net.Http;
-using System.Net.Http.Headers;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
-using ApiMeli.Models; 
+using Newtonsoft.Json.Linq;
 
-namespace ApiMeli
+namespace ApimeliV2
 {
-    class Program
+    public class Program
     {
-        static async System.Threading.Tasks.Task Main(string[] args)
+        public static void Main(string[] args)
         {
-            string url = "https://api.mercadolibre.com/sites/MCO/search?q=corps";
-            HttpClient client = new HttpClient();
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            var builder = WebApplication.CreateBuilder(args);
 
-            HttpResponseMessage response = await client.GetAsync(url);
-            if (response.IsSuccessStatusCode)
+            builder.Services.AddControllers();
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen(c =>
             {
-                string content = await response.Content.ReadAsStringAsync();
-                Results result = JsonConvert.DeserializeObject<Results>(content);
-                foreach (var item in result.results)
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "MercadoLibre API", Version = "v1" });
+            });
+
+            builder.Services.AddScoped<MercadoLibreAPI>();
+
+            var app = builder.Build();
+
+            if (app.Environment.IsDevelopment())
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI(c =>
                 {
-                    Console.WriteLine("ID: " + item.Id);
-                    Console.WriteLine("Título: " + item.Title);
-                    Console.WriteLine("Precio: " + item.Price);
-                    Console.WriteLine("Link: " + item.Permalink);
-                    Console.WriteLine("------------------------");
-                }
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "MercadoLibre API V1");
+                });
             }
 
-            Console.ReadLine();
+            app.UseRouting();
+            app.UseAuthorization();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+
+            app.Run();
         }
     }
 }

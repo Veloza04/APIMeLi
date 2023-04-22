@@ -273,11 +273,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ACER\\Documents\\APIMeli\\ApiMEli\\ApiMEli\\ApiMEli.csproj",
-      "projectName": "ApiMEli",
-      "projectPath": "C:\\Users\\ACER\\Documents\\APIMeli\\ApiMEli\\ApiMEli\\ApiMEli.csproj",
+      "projectUniqueName": "C:\\Users\\ACER\\Documents\\Programacion\\APIMeLi\\ApiMEli\\ApiMeli.csproj",
+      "projectName": "ApiMeli",
+      "projectPath": "C:\\Users\\ACER\\Documents\\Programacion\\APIMeLi\\ApiMEli\\ApiMeli.csproj",
       "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ACER\\Documents\\APIMeli\\ApiMEli\\ApiMEli\\obj\\",
+      "outputPath": "C:\\Users\\ACER\\Documents\\Programacion\\APIMeLi\\ApiMEli\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
