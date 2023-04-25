@@ -1,20 +1,30 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using APIMeli.Models;
 
-[ApiController]
-[Route("[controller]")]
-public class MercadoLibreController : ControllerBase
+namespace APIMeli.Controllers
 {
-    private readonly MercadoLibreAPI api;
-
-    public MercadoLibreController(MercadoLibreAPI api)
+    [Route("Lista")]
+    [ApiController]
+    public class productsController : ControllerBase
     {
-        this.api = api;
-    }
+        private readonly Products products;
+        public productsController(Products products)
+        {
+            this.products = products;
+        }
 
-    [HttpGet]
-    public async Task<IEnumerable<MercadoLibreResult>> Search(string Busqueda)
-    {
-        var results = await api.Search(Busqueda);
-        return results;
+        [HttpGet()]
+        public async Task<IActionResult> Search(string search)
+        {
+            var results = await products.Search(search);
+
+            if (results == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(results);
+        }
     }
 }
