@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
-using Microsoft.EntityFrameworkCore;
 using APIMeli.Models;
 
 namespace APIMeli;
@@ -15,7 +14,7 @@ public class Program
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
 
-        builder.Services.AddScoped<APIMeli.Models.Results>();
+        builder.Services.AddScoped<APIMeli.Models.Products>();
 
         var app = builder.Build();
 

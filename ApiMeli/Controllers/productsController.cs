@@ -8,8 +8,8 @@ namespace APIMeli.Controllers
     [ApiController]
     public class productsController : ControllerBase
     {
-        private readonly Products products;
-        public productsController(Products products)
+        private readonly Models.Products products;
+        public productsController(Models.Products products)
         {
             this.products = products;
         }
