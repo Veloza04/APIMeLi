@@ -12,9 +12,9 @@ public class MercadoLibreController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IEnumerable<MercadoLibreResult>> Search(string query)
+    public async Task<IEnumerable<MercadoLibreResult>> Search(string Busqueda)
     {
-        var results = await api.Search(query);
+        var results = await api.Search(Busqueda);
         return results;
     }
 }

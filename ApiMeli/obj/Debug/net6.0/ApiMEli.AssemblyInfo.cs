@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("ApiMeli")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("APIMeli")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("ApiMeli")]
-[assembly: System.Reflection.AssemblyTitleAttribute("ApiMeli")]
+[assembly: System.Reflection.AssemblyProductAttribute("APIMeli")]
+[assembly: System.Reflection.AssemblyTitleAttribute("APIMeli")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.

@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ACER\\Documents\\Programacion\\APIMeLi\\ApiMEli\\ApiMeli.csproj": {}
+    "C:\\Users\\ACER\\Documents\\Programacion\\APIMeLi\\ApiMEli\\APIMeli.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ACER\\Documents\\Programacion\\APIMeLi\\ApiMEli\\ApiMeli.csproj": {
+    "C:\\Users\\ACER\\Documents\\Programacion\\APIMeLi\\ApiMEli\\APIMeli.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACER\\Documents\\Programacion\\APIMeLi\\ApiMEli\\ApiMeli.csproj",
-        "projectName": "ApiMeli",
-        "projectPath": "C:\\Users\\ACER\\Documents\\Programacion\\APIMeLi\\ApiMEli\\ApiMeli.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\Documents\\Programacion\\APIMeLi\\ApiMEli\\APIMeli.csproj",
+        "projectName": "APIMeli",
+        "projectPath": "C:\\Users\\ACER\\Documents\\Programacion\\APIMeLi\\ApiMEli\\APIMeli.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\ACER\\Documents\\Programacion\\APIMeLi\\ApiMEli\\obj\\",
         "projectStyle": "PackageReference",
@@ -40,6 +40,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
